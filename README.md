@@ -49,11 +49,50 @@ Now we will use Remote Desktop Connection to log into Client-1.  We will test ne
 <img src="https://i.imgur.com/qCbSm0u.jpg" height="80%" width="80%" alt="Client-1 Pinging DC-1"/>
 </p>
 <br />
-
+<hr>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+On DC-1 we will install Active Directory Domain Services through the Server Manager.  After installation is complete we will promote as a domain controller.
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img src="https://i.imgur.com/8tICw73.jpg" height="80%" width="80%" alt="Install Active Directory Domain Services"/>
+</p>
+<br />
+<hr>
+<p>
+Then we will open Active Directory Users and Computers and add two Organizational Units (OUs): _EMPLOYEES, _ADMINS.  We will then create a user and add them to the _ADMINS OU.  We will also add them to the "Domain Admins" security group.
+</p>
+<p>
+<img src="https://i.imgur.com/8vf4q2g.jpg" height="80%" width="80%" alt="Add to Organizational Units"/>
+</p>
+<p>
+<img src="https://i.imgur.com/Bc78UmL.jpg" height="80%" width="80%" alt="Add User to OU and Security Group"/>
+</p>
+<br />
+<p>
+On DC-1 we will install Active Directory Domain Services through the Server Manager.  After installation is complete we will promote as a domain controller.
+</p>
+<p>
+<img src="https://i.imgur.com/8tICw73.jpg" height="80%" width="80%" alt="Install Active Directory Domain Services"/>
+</p>
+<br />
+<p>
+On DC-1 we will install Active Directory Domain Services through the Server Manager.  After installation is complete we will promote as a domain controller.
+</p>
+<p>
+<img src="https://i.imgur.com/8tICw73.jpg" height="80%" width="80%" alt="Install Active Directory Domain Services"/>
+</p>
+<br />
+<p>
+On DC-1 we will install Active Directory Domain Services through the Server Manager.  After installation is complete we will promote as a domain controller.
+</p>
+<p>
+<img src="https://i.imgur.com/8tICw73.jpg" height="80%" width="80%" alt="Install Active Directory Domain Services"/>
+</p>
+<br />
+<p>
+On DC-1 we will install Active Directory Domain Services through the Server Manager.  After installation is complete we will promote as a domain controller.
+</p>
+<p>
+<img src="https://i.imgur.com/8tICw73.jpg" height="80%" width="80%" alt="Install Active Directory Domain Services"/>
 </p>
 <br />
