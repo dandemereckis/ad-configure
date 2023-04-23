@@ -68,31 +68,76 @@ Then we will open Active Directory Users and Computers and add two Organizationa
 <img src="https://i.imgur.com/Bc78UmL.jpg" height="80%" width="80%" alt="Add User to OU and Security Group"/>
 </p>
 <br />
+<hr>
 <p>
-On DC-1 we will install Active Directory Domain Services through the Server Manager.  After installation is complete we will promote as a domain controller.
+Our next step will be the join Client-1 to DC-1.  In order to do this we need to set Client-1's DNS settings to DC-1 private IP address in Microsoft Azure (Microsoft Azure will automatically supply a DNS server by default, this DNS server will not allow us to find DC-1).
 </p>
 <p>
-<img src="https://i.imgur.com/8tICw73.jpg" height="80%" width="80%" alt="Install Active Directory Domain Services"/>
+<img src="https://i.imgur.com/751hATB.jpg" height="80%" width="80%" alt="Join Client-1 to DC-1"/>
+</p>
+<br />
+<hr>
+<p>
+Client-1 now shows up under Computers in Active Directory Users and Computers.  We created a new OU named _CLIENTS and moved Client-1 into there.
+</p>
+<p>
+<img src="https://i.imgur.com/uY6Frqf.jpg" height="80%" width="80%" alt="Moved Client-1 into _CLIENTS"/>
+</p>
+<br />
+<hr>
+<p>
+While logged into Client-1 as an administrator we will allow "Domain Users" to remote access this PC.
+</p>
+<p>
+<img src="https://i.imgur.com/ZbyJPw3.jpg" height="80%" width="80%" alt="Allow "Domain Users" to Remote in"/>
+</p>
+<br />
+<hr>
+<p>
+Back in DC-1 we will open Powershell ISE as an administrator.  We will add a script that will generate 1,000 random users and imput them into our Active Directory.  (Source to the script: <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1">Powershell Script</a>)
+</p>
+<p>
+<img src="https://i.imgur.com/l7nGq2b.jpg" height="80%" width="80%" alt="Powershell Script"/>
+</p>
+<p>
+<img src="https://i.imgur.com/aYNMnfg.jpg" height="80%" width="80%" alt="Powershell Script Running"/>
+</p>
+<br />
+<hr>
+<p>
+Back in DC-1 we will open Powershell ISE as an administrator.  We will add a script that will generate 1,000 random users and imput them into our Active Directory.  (Source to the script: <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1">Powershell Script</a>)
+</p>
+<p>
+<img src="https://i.imgur.com/l7nGq2b.jpg" height="80%" width="80%" alt="Powershell Script"/>
+</p>
+<p>
+<img src="https://i.imgur.com/aYNMnfg.jpg" height="80%" width="80%" alt="Powershell Script Running"/>
+</p>
+<br />
+<hr>
+<p>
+As we can see all randomly generate names are located in the _EMPLOYEES OU.
+</p>
+<p>
+<img src="https://i.imgur.com/XbeBCWg.jpg" height="80%" width="80%" alt="All Users Added to OU"/>
+</p>
+<br />
+<hr>
+<p>
+On Client-1 we attempted to login to a randomly generated name with the wrong password several times.  On DC-1 we can reset the user's password.  We can also unlock the account if the user is locked out.
+</p>
+<p>
+<img src="https://i.imgur.com/HMP2bpu.jpg" height="80%" width="80%" alt="Failed Login"/>
+</p>
+<p>
+<img src="https://i.imgur.com/aBScJM1.jpg" height="80%" width="80%" alt="Reset Password"/>
+</p>
+<p>
+<img src="https://i.imgur.com/omoYzD4.jpg" height="80%" width="80%" alt="Reset Password"/>
+</p>
+<p>
+<img src="https://i.imgur.com/tKC1C8k.jpg" height="80%" width="80%" alt="Unlock Account"/>
 </p>
 <br />
 <p>
-On DC-1 we will install Active Directory Domain Services through the Server Manager.  After installation is complete we will promote as a domain controller.
-</p>
-<p>
-<img src="https://i.imgur.com/8tICw73.jpg" height="80%" width="80%" alt="Install Active Directory Domain Services"/>
-</p>
-<br />
-<p>
-On DC-1 we will install Active Directory Domain Services through the Server Manager.  After installation is complete we will promote as a domain controller.
-</p>
-<p>
-<img src="https://i.imgur.com/8tICw73.jpg" height="80%" width="80%" alt="Install Active Directory Domain Services"/>
-</p>
-<br />
-<p>
-On DC-1 we will install Active Directory Domain Services through the Server Manager.  After installation is complete we will promote as a domain controller.
-</p>
-<p>
-<img src="https://i.imgur.com/8tICw73.jpg" height="80%" width="80%" alt="Install Active Directory Domain Services"/>
-</p>
-<br />
+This is all for installing configuring Active Directory.  In the next section we will share files and edit permissions.
